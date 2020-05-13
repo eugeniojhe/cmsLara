@@ -1,0 +1,187 @@
+<Dicas laravel  - Laratrainv - Iniciado me 18/03/2020 - 
+Progress: 25/03/2020 - 14%     26/03/2020->  18% 28/03/2020 20%  01/04/ 23%
+
+
+->Creating a project 
+# laravel new project_name; 
+->Criando um servidor do projeto(Após criar o projeto, o diretório do projeto de digite o comando a seguir)
+#php artisan serve
+-> Criando um controller 
+#php artisan make:controller nomeController; 
+    (O comando acima cria a controller limpo)
+#php artisan make:controller nameController --resource 
+    (O comando acima cria a controller já com algumas 
+     actions pré-definidas - Actions padrões)
+->Configurações basicas 
+A pasta public  é a mais importante do projeto. Quando se faz um projeto em php, a pasta do projeto é a que vai ser direcionada para o servidor. No laravel a pasta public é que será visivel para o servidor. É o que as pessoas vao acessar. 
+->Configurando o arquivo .env que esta na raiz do projeto 
+#php artisan key:generate 
+(O comando acima gera APP_KEY=base64:Jtj1ADSSxL4UgamZL4j1UvhrVwe, que é uma hash que sera usada em todos os projetos)Obs: Verificar, observei que antes de gera a a chave o arquivo .env ja tinha um hash criado, após rodar o comando acima, criou se outro rash. 
+->Gerenciador de banco de dados, depois olhar o heid sql. 
+-> Na Raiz do projeto, existe a pasta config, com alguns arquivos, no arquivo dababase.php tem os valores padrões para  tratatamento do banco de dados. Se o sistem não encontra definições relativas a banco de dados no arquivo .env, os valores constantes de database.php serão usados. No file database.php foram mudados as variaves charset e collation de utf8m4 e utf8mb4_unicode_ci para utf_general_ci. Nesta pasta tem diversos arquivos para as mais diversas configurações do sistema. 
+->Pastas(Diretórios)
+1) app\ A pasta app é o onde fica os principais códigos da aplicação.
+2 boostrap\ Esta pasta não tem nada a ver com a framework boostrap 3 ou 4. Esta pasta é na realidade usada para carga do sistema
+2) config\ pasta relacionada com as configurações da aplicação, 
+3) database\ Pasta relacionada ao tratamento do BD. O arquivo mais importante desta pasta é são os migration que fica na subpasta migration. 
+4) Public\ É onde fica as sub pastas e arquivos pertencentes a aplicação. Esta pasta sera acessada pelo servidor e visivél aos usuário. 
+5) resources\ Pasta onde estara a recursos da aplicação, como  codigo de javascript,  css, views etc. 
+6) routes\ Pasta onde é tratada as rotas da aplicação. 
+7) Storage\ Ficara armazenado outros recursos do sistema.
+8) testes\ Pasta relativa aos testes da aplicação. 
+9) Vendor\ Pasta onde ficara os recursos do composer para gerenciamento de pacotes da aplicação
+
+Route::fallback(function(){
+    return view('404'); 
+})
+
+Na pasta app\Http\Controllers, saõ criadas os nossos controllers - Pode se criar manualmente
+o controller ou usar o comando #php artisan make:controller NomeDoController.php
+
+Dados Globais: 
+11) App\Providers\AppServiceProvider.php - > action boot-> Pode se passar variavies
+   para todas a views  para usar este recurso deve se importar (use Illuminate\Support\Facades\View; ) 
+   para este arquivo e dentro da action boot codificar o seguinte:  View::share('versao','1.0'); 
+
+12) Componentes, caixas de mensagens ou alert ao usuários. Components são na verdade caixas que 
+são criados por meio de views, Na realidade é uma view que é acionada internamente em algum
+outra view. 
+
+13) Para criar um atalho para o componente, em app\providers\AppServiceProvider.php importar 
+    \Illuminate\Support\Facades\Blade  e na action boot, do serviveProvider, registrar se 
+    o atalho:  Blade::Component('diretorio(s)abaixodeview.nomecomponent,'nomecomponent'); 
+
+14) Query builder e eloquent 
+
+15) Para usar as funcionalidades de DROP TABLE IF EXISTS `password_resets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  KEY `password_resets_email_index` (`email`),
+  KEY `password_resets_token_index` (`token`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;banco de dados nos controlleres, deve-se importar use Illuminate\Support\Facades\DB
+
+16) Trabalhando com eloquent ORM(Object relation Map)
+    php artisan make:model nome_table(Nome da 
+     tabela por padronização deve estar no singular); 
+17) Dentro do Model criado que fica em app\novo_model 
+   casa a table referente ao model criado 
+   não tenha a mesmo nome do Model, pode se usar 
+   a variavel protected $table="Tabela_real" para 
+   referenciar a tabela a qual o model se refere 
+18) Caso o nome da primary da tabela referenciada
+    no model seja diferente de "id", pode se usar a 
+    variavel protected $primarykey para redefinir a 
+    variavel. 
+19)// Caso o nome da table no plural nao
+    // tenha o nome deste model no singular, a mesma 
+    // podera ser redefinida pelo uso sa 
+    //variavel abaixo 
+    //protected $table = "table_real";
+
+    //Caso o nome da primary key seja diferente de 
+    //id, poderá ser redefinida com a variavel 
+    //abaixo 
+    //protected $primarykey ="nome_primary_key" 
+
+    //caso a primary key não seja auto-increment
+    //usar  a public $incrementing="false"
+
+    //public $incrementing = false;
+    
+    //caso a key seja diferente de number
+    //protected keyType = "string"; 
+
+    //caso a tabela não tenha o campo created_up and 
+    //updated_up, usa se a variavle public timestamp = false
+    //public timestamp = false; 
+
+    //Caso as colunas de datas relativas a criacao e alteração
+    //do registro seja diferente das variaveis acima
+    //pode se a const CREATED_AT e UPDATED_AT para 
+    //redefinilas 
+
+    //const CREATED_AT = "nome_coluna_criacao"
+    //const UPDATED_AT = "nome_coluna_data_alteracao"
+
+    //Campos que podem ser preenchidos em 
+    //massa - dever ser declarados no Model  
+    // public  $fillable = ['titulo]
+
+
+    20) middleware -> São processos que são executados 
+    após o usuário requisitar um url ou requisiçao e antes que 
+    ele acesse um determinado controller. 
+    Por exemplo o usuário requisita a rota
+     Route::prefix('/config')->group(function(){
+	    route::get('/','Admin\ConfigController@index')->middleware('auth');
+    Pela expecificação do nome midlleware('auth), o laravel 
+    tenta executar a rota login.
+     Route::get('/login',function(){
+	echo "Faça login para acessar o sistema"; 
+    })->name('login');
+
+    casa não exista a rota defenida o laravel 
+    reportara um erro. Os midlleware são importante como 
+    processo de validações diversas do sistema antes 
+    do sistema acessar as funcionalidade de determinadas 
+    rotas ou requisições. 
+
+    21) Authorizatio - Criando regras de accesso 
+    e autorização, no sistema.
+    App\Http\Providers\AuthoServiceProvider.php 
+    após criado o gate. Após sua criação, 
+    relacionamos o gate no controller que desejamos
+    testar a autorização. 
+
+    A section é criada no controller por exempol logController.php
+    Metodos das seções get, put, fortet 
+
+    $request->session()->forget('nome_da_secao'); 
+
+    Internaciolização. No caminho app\config\app.php 
+    pode de definir a linguagem padrão de 
+    mensagens emitidas pelo aplicativo, 
+    pela mudança do conteúdo 
+     
+     'locale' = 'pt-BR"
+     Este arquivo se relaçiona com o arquivo validation.php que esta 
+     no caminho \app\lang\en\validation.php
+
+     Para realizar a traduçaõ para um linguagem especifica 
+     cria se um copia de diretório en 
+     e o modifica o nome deste diretório de acordo 
+     com o nome definido na variáve locale, neste caso pt-BR, após isto 
+     entra se no arquivo - validation.php do diretório renomeado a faz a traduçãoi 
+     de acordo com a linguange a ser usad como padrão. 
+
+     Para se criar um grupo de mensagens, 
+     cria se um novo arquivo conforme o padrao do 
+     arquivo validation.php e no mesmo diretório.
+     Para se usar o grupo de mensagens criado neste arquivo 
+     dentro da view basta usar a directiva @lang('nome_arquivo.nome_do_index); 
+     or {{__(nome_do_arquivo.indice)}}
+     
+     Para usar este mesmo grupo de mensagens nos controllers 
+     usa se $variavel __('nome_do_arquivo.indice_da_mensagen);
+     a variável pode ser mostrada de acordo com o seu contexto 
+     se for uma string pode se usar por exemplo echo $variavel;
+
+     
+
+
+     
+
+
+
+
+
+
+    
+ 
+     
+
+
