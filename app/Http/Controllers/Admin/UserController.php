@@ -17,7 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all(); 
+        $users = User::paginate(2); 
         return view('admin.users.index',['users' =>$users]); 
     }
 
@@ -55,6 +55,14 @@ class UserController extends Controller
             ->withErrors($validator)
             ->withInput();
         }
+
+        // It could be this way 
+       /*  User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' = Hash:make[$data('password')
+        ]), */
+
         $user = new User;
         $user->name = $data['name'];
         $user->email = $data['email'];
@@ -82,8 +90,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
-        echo "Inside edit action of users ".$id; 
+        $user = User::find($id);
+        if ($user){
+            return view('admin.users.edit',['user' => $user]);
+        }else {
+            return redirect()->route('users.index'); 
+        }       
     }
 
     /**
@@ -95,7 +107,64 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id); 
+        if ($user){
+            $data = $request->only([
+                'name','email',
+                'password','password_confirmation']
+            );
+            $validator = Validator::make([
+                'name' => $data['name'],
+                'email' => $data['email']
+            ],[
+              'name' => ['required','string','max:100'],
+              'email' => ['required','string','email','max:100']  
+            ]);
+            
+
+            if ($user->email != $data['email']){
+                $hasEmail = User::where('email',$data['email'])->get();
+                if (count($hasEmail) === 0){
+                    $user->email = $data['email']; 
+                }else{
+                    $validator->errors()->add('email',
+                    __('validation.unique',[
+                        'attribute' => 'email'
+                    ]));
+                }
+            }
+
+            if (!empty($data['password'])){
+                if (strlen($data['password']) >=4 ){
+                    if ($data['passwords'] == $data['password_confirmation'] ){
+                        $users->password = Hash::make($data['password']);
+    
+                    }else{
+                        $validator->errors()->add('password',
+                        __('validation.confirmed',[
+                            'attribute' => password
+                        ]));
+                    }
+                }else{
+                    $validator->errors()->add('password',
+                    __('validation.min.string',[
+                        'attribute' => 'password',
+                        'min' => 4 
+                    ]));                   
+                }
+               
+            }
+
+            if (count($validator) > 0 ){
+                return redirect()->route('users.edit',[
+                    'user'=>$id 
+                ])->withErrors($validator); 
+            }
+
+            $user->name = $data['name']; 
+            $user->save();
+        }
+        return redirect()->route('users.index'); 
     }
 
     /**

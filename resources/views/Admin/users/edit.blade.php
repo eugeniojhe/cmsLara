@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title','Usuários')
+@section('title','Edit - Usuários')
 
 @section('content_header')
-    <h1>New</h1>    
+    <h1>Edition</h1>    
 @endsection
 
 @section('content')
@@ -24,19 +24,23 @@
         </div>
     @endif 
 
-    <form class="form-horizontal" action="{{route('users.store')}}" method="POST">
+    <form class="form-horizontal" action="{{route('users.update',['user' =>$user->id])}}" method="POST">
         @csrf
+        @method('PUT')
         <div class="card-body">
             <div class="form-group row">
                 <label for="name" class="col-sm-1 control-label">Name:</label>
                 <div class="col-sm-11">
-                   <input type="text" class="form-control @error('name') is-invalid  @enderror" name="name" placeholder="name">
+                   <input type="text" class="form-control
+                    @error('name') is-invalid  @enderror"
+                name="name" value="{{$user->name}}" placeholder="name">
                </div>
             </div>
             <div class="form-group row">
                 <label for="email" class="col-sm-1 control-label">Email:</label>
                 <div class="col-sm-11">
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="name">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror"
+                name="email" value="{{$user->email}}" placeholder="name">
                 </div>
             </div>
             <div class="form-group row">
