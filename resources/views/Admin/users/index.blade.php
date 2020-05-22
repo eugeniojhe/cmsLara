@@ -28,7 +28,14 @@
                         <td>{{$user->email}}</td>
                         <td>
                         <a href="{{route('users.edit',['user' =>$user->id])}}" class="btn btn-sm btn-info">Edit</a>
-                        <a href="{{route('users.destroy',['user' =>$user->id])}}" class="btn btn-sm btn-danger">Delete</a>
+                        @if($loggedId !== $user->id)
+                            <form method="POST" action="{{route('users.destroy',['user' =>$user->id])}}" class="d-inline">
+                                @csrf
+                                @method('DELETE') 
+                                <button class="btn btn-sm btn-danger" onclick="return confirm('Are you Sure')">Delete</button>
+                            </form>
+                        @endif  
+                                              
                         </td>
                     </tr>
                     @endforeach

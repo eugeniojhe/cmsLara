@@ -29,6 +29,8 @@ Route::prefix('painel')->group(function()
     Route::post('logout','Admin\Auth\LoginController@logout')->name('logout');   
    // Route::get('users','Admin\UserController@index')->name('users'); 
     Route::resource('users','Admin\UserController'); 
+    Route::get('profile','Admin\ProfileController@index')->name('profile'); 
+    Route::post('profilesave','Admin\ProfileController@save')->name('profile.save');
 });
 
 /* Auth::routes();

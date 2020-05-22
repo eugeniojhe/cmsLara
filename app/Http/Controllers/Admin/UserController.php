@@ -7,9 +7,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator; 
 use Illuminate\Support\Facades\Hash; 
 use App\User; 
+use Illuminate\Support\Facades\Auth;  
 
 class UserController extends Controller
 {
+    
+     public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:edit-users');  
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -17,8 +25,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(2); 
-        return view('admin.users.index',['users' =>$users]); 
+        $users = User::paginate(5); 
+        $loggedId = Auth::id(); 
+        return view('admin.users.index',['users' =>$users,
+                                         'loggedId'=> $loggedId]); 
     }
 
     /**
@@ -136,13 +146,13 @@ class UserController extends Controller
 
             if (!empty($data['password'])){
                 if (strlen($data['password']) >=4 ){
-                    if ($data['passwords'] == $data['password_confirmation'] ){
-                        $users->password = Hash::make($data['password']);
+                    if ($data['password'] == $data['password_confirmation'] ){
+                        $user->password = Hash::make($data['password']);
     
                     }else{
                         $validator->errors()->add('password',
                         __('validation.confirmed',[
-                            'attribute' => password
+                            'attribute' => 'password'
                         ]));
                     }
                 }else{
@@ -155,8 +165,8 @@ class UserController extends Controller
                
             }
 
-            if (count($validator) > 0 ){
-                return redirect()->route('users.edit',[
+            if (count($validator->errors()) > 0 ){
+                return redirect()->route('profile.save',[
                     'user'=>$id 
                 ])->withErrors($validator); 
             }
@@ -175,6 +185,11 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        echo "You are inside of destroy action ".$id; 
+       $loggedId = intval(Auth::id());
+       if ($loggedId !== intval($id)) {
+           $user = User::find($id);
+           $user->delete();
+       }
+       return redirect()->route('users.index');
     }
 }

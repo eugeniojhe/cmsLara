@@ -59,9 +59,7 @@ class LoginController extends Controller
        $remember = $request->input('remember',false);
          
        if ($validator->fails()){
-           echo "Fail in the validator"; 
-           exit; 
-           return redirect()->route('login')
+            return redirect()->route('login')
                 ->withErrors($validator)
                 ->withInput();
        }

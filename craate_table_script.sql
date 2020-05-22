@@ -28,3 +28,18 @@ CREATE TABLE `password_resets` (
 
 ALTER TABLE `db_cms_laravel`.`users`   
   ADD  UNIQUE INDEX `users_email_unique` (`email`);
+
+
+CREATE table settings (
+    id int not null auto_increment,
+    name varchar(20),
+    content text,
+    primary key(id)
+)
+
+/*
+  insert columns title,
+  subtitle, email, bgcolor"#000000",
+  textcolor"#ffffff", 
+
+*/

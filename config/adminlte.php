@@ -243,11 +243,17 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
+            'can' => 'edit-users'
         ],
         ['header' => 'account_settings'],
         [
+            'text' => 'Settings',
+            'url'  => 'painel/settings',
+            'icon' => 'fas fa-fw fa-file',
+        ],
+        [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => 'painel/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

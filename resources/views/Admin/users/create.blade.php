@@ -30,13 +30,13 @@
             <div class="form-group row">
                 <label for="name" class="col-sm-1 control-label">Name:</label>
                 <div class="col-sm-11">
-                   <input type="text" class="form-control @error('name') is-invalid  @enderror" name="name" placeholder="name">
+                <input type="text" class="form-control @error('name') is-invalid  @enderror" name="name" value="{{old('name')}}" placeholder="name">
                </div>
             </div>
             <div class="form-group row">
                 <label for="email" class="col-sm-1 control-label">Email:</label>
                 <div class="col-sm-11">
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="name">
+                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" placeholder="name">
                 </div>
             </div>
             <div class="form-group row">
