@@ -25,7 +25,7 @@
 
 @if(session('warning'))
     <div class="alert alert-info alert-dismissible">
-        <button class="close">x</button>
+        <button class="close">&times;</button>
         {{session('warning')}}
     </div>
 @endif 
