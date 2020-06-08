@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/* Route::post('imageupload',function(){
+    return [
+        'location' => 'https://www.google.com.br/google.jpg'
+    ];
+})->name('imageupload'); */
+
+
+Route::post('imageupload','Admin\UploadController@imageupload')->name('imageupload'); 
