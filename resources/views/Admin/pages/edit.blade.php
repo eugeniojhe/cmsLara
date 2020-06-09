@@ -61,7 +61,10 @@
             toolbar:'undo redo | formatselect | bold italic backcolor | alignleft aligncenter | alignright | alignjustfy | table | link image | bullist numlist',
             content_css:[
                 '{{asset('assets/css/content.css')}}'
-            ]
+            ],
+            images_upload_url:'{{route('imageupload')}}',
+            images_upload_credentials:true, 
+            conver_urls:false
         });
     </script>
 @endsection 
