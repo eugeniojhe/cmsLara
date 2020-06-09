@@ -1,0 +1,346 @@
+    +-----------------------+
+ 	  | Historico dos projetos| 
+ 	  +-----------------------+ 
+09/06/2020 - Refazendo o trabalho perdido no cms Laravel 
+08/06/2020 - Ress - Levar Vinicius clincia dentário do povo. 
+06/06/2020 - Sab - Descobri que tinha perdido parte de trabalho feito no Laravel CMS 
+05/06/2020 - Tarde NodeJs
+             Parte da mana Book, 384 - Proxima treinamento continuar com outro projeto de criação de componentes, aproveitamento o que foi desenvolvido em bookComponents. 
+
+04/06/2020 - Laravel o dia todo, não rendeu muito bem  
+              Laravel - Upload de imagens. 
+03/06/2020 -  Leitura sobre egoista, 
+              Financeiro
+              Palestra  
+              Node.js ' Projeto no destkop 
+             Financeiro  
+             Linkedin 
+             Ingles  
+             Parte manha comprar led Vinicius,
+02/06/2020 - Laravel a partir da 16:15 
+02/06/2020 - Book Components - Cap 6 - Dar continuidade. O formulario foi mostrado na tela, falta agora, ajustar o posicionamento de labels de campos que ainda não esta ok 
+01/06/2020 - git - Criando branch dentro de repositórios visando o pull request. fiz git push -u origin head porém como nao criei o branch head localmente o mesmo foi para o master remoto, já que estava neste branch localmente. 
+01/06/2020 - Laravel     
+01/06/2020 - Ingles - Até as 11:36 
+29/05/2020 - Js New Chat - Parte da tarde, ajustando a requisição para que não traga usuarios em duplicidade, do banco de dados - Exemplo( O mesmo usuário esta em mais, de um grupo, a query esta trazendo a quantidade de linhas deste usuário de acordo com a quantidade de grupos no qual ele esta conectado)
+29/05/2020 - Parte da manha fui levar cesta basica a Cadas Sta Gema, uma casa de abrigo no Bairro perto do Aeroporto, depois fui até o LaborMed para fazer espermograma  
+28/05/2020 - A partir das 15:00 hrs Laravel CMS, na parte da manhã, fui até o assai realizar as compras mensais. 
+27/05/2020 - Boostrap - Cards  
+27/05/2020 - Book components - Pag 377 projeto bookComponents. 
+27/05/2020 - Book - Entender melhor os conceitos de webservices. Pg 368. 
+26/05/2020 - Git and gitHub com Gustavo Guanabara 
+26/05/2020 - Laravel A partir das 13:30
+26/05/2020 - newChat - Verificando porque esta repetindo o usuario ativo, quando se seleciona mais de uma sala de bate  papo. Esta mostrando o usuario de acord com a sala de bate papos, ou seja se o usuario esta  em trê salas de bate papo, o mesmo usuário e mostrado 3 vezes. 
+25/05/2020 - Enrolei o dia todo. A noite newChat 
+23/05/2020 - Acho que foi boostrap 
+22/05/2020 - A noite - alerts      
+22/05/2020 - Dia toda  Laravel - Parte da manha, leitura sobre validation, as validações podem ser realizadas pelo object Request ou pela classe Facade Validator. 
+21/05/2020 - newChat verficar a methdo activityUsers, problemas na retorno do json. Retorna os objeto json com arrays fora de sequencia, por exempos 1 , 3,  7  
+   newChat. A partir 12:00 de manha levar,
+ Vinicius ao médico e depois fazer pequenas compras 
+20/05/2020 - newChat - At next class go from here - createNewGrupoInModal
+20/05/2020 - Laravel - Fechou o CRUD cadastro de usuáris, agora sera a manutenção do Perfil do usuário cadastrado. 
+20/05/2020 - Leitura Inglês na parte da Manhã. 
+
+19/05/2020 - Git e gitHub com Marcelo Guanabara. 
+19/05/2020 - JS NewChat, 
+19/05/2020 - Ingles - Book  - Webservices. Endentimento  
+              do uso dos namespace e use. 
+              Quando se vai chamar um determinado metodo de uma funcçao
+              estaticamente o php usa o namespace 
+              passando a pasta e o nome do classa para o loader, 
+              desta forma  o tratamento de carga da classe/fetchObject
+              deve levar em consideração esta caracterista. 
+              Da mesma forma, quando se usa new e tem um name 
+              namespace declarado na classe, este devera 
+              ser usado em new namespace/classe.  
+18/05/2020 - Financeiro - Conferencias
+             Git and GitHub - Marcelo Guanabara 
+18/05/2020 - Booststrap - Typography - More typography classes
+18/05/2020 - Laravel - A partir das 10:00 - Proximo treinamento
+             validar as edições do registro. Senha, name, email  
+16/05/2020 - Js - Mudando Js of NewChat para usar ECMA6
+             termiar o metódo usersActivity
+15/05/2020 - No proximo treinamento, continuar 
+             mais um pouco para enterder os namespace e suas implicações
+             em relação a instanciamento. 
+             Se uso o namespace, durante a instancia do arquivo 
+             new Nome_classe, deversa ser usadp new namespaces\nome-classes
+             Pagina 372. From 12:00  Am started book - Project webservice 
+14/05/2020 - Laravel all day. At the night a little about 
+             github where a read about pull requests. 
+13/05/2020 - Js all day. Changing newChat project
+             to use js map and clearing html constructions 
+             inside js files. 
+12/05/2020 - Laravel all day, it has a good development
+             tomorrow I have to train more. 
+11/05/2020 -Laravel a partir das 10:48
+
+09/05/2020 - Sabado um pouco de laravel no final de tarde 
+            de sabado. 
+08/05/2020 -JavaScript, usando os mesmos arquivos
+            utilizados no projeto menu_navegação. 
+                  
+07/05/2020 - Laravel Iniciado a partir das 14:00 Hrs,
+             Criado o projeto, cmsLara, agora a definição esta se 
+             sigo somente neste projeto ou se criou outro a parte 
+             para seguir com professor, usando neste segundo toda a funcionalidade 
+             do framework, já que o professor vai fazer várias coisas 
+             manuais já que se trata de aulas e entendimento de como 
+             a ferramente é usado. Acho que seria bom 
+             fazer algum coisa com boostrep 5, já que esquici 
+             bastante coisa e ele é usado bastante no laravel.  
+             
+             
+06/05/2020 - Book - Entendendo, como funciona a instrução 
+            query com fetchObject(get_class(this)),
+             na proxima dar mais uma olhada 
+05/05/2020 - JavaScript - Nivel 01 - Bom rendimento, ouvi as 
+            videos/aulas e depois treinei up pouco 
+             e requisição via JS 
+04/05/2020 - Laravel - Já no final de tarde - Fui até session
+             razoável rendimento, proximo treinamento
+             exercitar a habilitação do botao submit 
+             bem com bular o mesmo, testar tambem 
+             com relação ao formulário.  
+02/05/2020 - Book, webservice - Terminado, agoara 
+             exercitando as requisições realizadas 
+             via js/jquery - ;          
+01/05/2020 - Estudei o Laravel, foi um bom rendimento
+30/04/2020 - Javascript Nivel 01. Fui até os metódos de array
+             find(). Razoável rendimento. 
+29/04/2020 - Treinamento laravel 
+28/04/2020 - Quando se usa o namespace nas classes, 
+             ativivades de instanciamento fazem uso 
+             dos namespace, desta forma não se deve 
+             usar name spaces nas situações em vai se procurar
+             as classe manualmente em diretorio pré-definidos. 
+             
+28/04/2020 - O dia todo - Trabalhando a parte do book - Webservices. 
+27/04/2020 - Ressaca  
+25/04/2020 - Construi e aplicativo, em projetox/menu_navegacao
+             Javascript - Nivel' - Até querySelector
+24/04/2020 - Javas Script - 
+23/04/2020 - Continuando laravel - A partir das 10:00 hrs
+             
+22/04/2020 - A partir das 18:30 Laravel - Somente foram criadas 
+             a tabela users, usando a linda de comando 
+             do terminal. 
+22/04/2020 - A partir das 12:30 book, webservices 
+             Na proxima etapa, continuar a trabalhar 
+             a questão do namespace e carregamento 
+             das classes de controle. 
+22/04/2020 - Parte manha caminhada, Supermercados e Ingles 
+             e atualização do financeiro. 
+21/04/2020 - Terminei o basico do sistema de pedidos em Pizzaria 
+                      
+20/04/2020 - Laravel - Ressaca - Descobri razão de nao estar criando 
+a pasta app\Htttp\Auth\Views - Relativas as autenticações
+do sistema.  
+16/04/2020 - Book -  Parte da manha, ate as 14:49, com uma boa pausa para almoço e redes sociais. - Proxima etapa
+constinuar a construção do webservices, verificando a razao da Classe Record implementar a interface RecordInterface 
+15/04/2020 - Laravel 
+14/04/2020 -> JS - Pizzaria - Devegar 
+11/08/2020 -> 2) Book(pag 372) - Iniciei a construção do rest. Criar uma aplicação a parte para o teste no diretório projetox/ 
+              1) Ingles       
+10/08/2020 -2) Na proximo treinamento, substituir a referencia ao target do evento, pelo objeto passado na funçao.  
+            1) Js ja inicie na parte da tarde, fui ao supermercado mix, posterguei um pouco até entrar no trabalho. 
+09/08/2020 - 3) Laravel 
+             2) Parte Manha - Book - Index.php -> Verificado 
+             o carregamento das classes  
+             1) Ingles 
+08/08/2020 -  JS Pizzaria - Ontem tive um razoável rendimento, 
+              em relação ao js pizza. O dia todo. 
+07/04/2020 -  4) Laravel, concluido a parte de CRUD, falta
+               contemplar os alerts, que não esta funcionando
+               mesmo após, codificar conforme o teacher explicou
+               nas aulas. Imagino que seja a versão tenho, 
+               que é antigar e não contempla o modo como estes 
+               alerts são desenvolvidos e carregados.  
+              3)Financeiro 
+              2)Parte da tarde, continua a procura 
+              de falha no carregamento de classes
+              o que na realidade era um falta de atençao 
+              em observar melhor o retorno. 
+              1)Book parte da manha, a partir das 9:30 
+           
+06/04/2020 - Ress - Levar Vinicius ao dentista parte da tarde. 
+04/04/2020 -  2) JavaScript nivel 01 Terça parte manha, Modulo 4 - Projeto compras de pizza
+              1)Até as 10:40, meio que desperdicio de tempo. Ingles, expi, Facebook. 
+03/04/2020 -  Parte da tarde - Keeps development of laravel crud. 
+              Parte da manha - Supermercado, Creating .gitignore file, 
+02/02/2020 - github - Criando repositorios, e subindo o projeto jspizzaria. Falta ajusta 
+             o arquivo .gitignore para não enviar alguns arquivos e diretórios. 
+             JavaScript nivel 01 Quinta parte manha, Modulo 4 - Projeto compras de pizza
+
+02/02/2020 - Parte da manha - Book, PessoaControl01.php Continua ClassLoader01.php,
+Pagina 366 - Praticar a PessoaControl01.php - Proxima atividade iniciar o Front controller
+            Modifiquei a classe criteria01 para que contemplasse o tipo de order by de um
+            select. Pagina 363 do book
+
+01/04/2020 -  QueryBuilder and Eloquent. 
+Parte da manha Laravel - Templates. A tarde também 
+             dowload faturas mensais, do mes de abril/2020 
+31/03/2020 - JavaScript nivel 01 Terça parte manha, Modulo 4 - Projeto compras de pizza. 
+30/02/2020 - Segunda ress
+28/03/2020 - Parte de manha, fui ao supermercados fazer compras, comecei laravel por 
+             volta das 15:45 - Templates em laravel. 
+27/03/2020 - Otimo o rendimento e entendimento do 
+             PessoaController01.php. No proxima vez criar uma class fora da namespace padrão e tentar usa-la, dentro do repository, após tela importado no modulo superior. 
+27/03/2020 -  Parte da manha - Book, PessoaControl01.php Continua ClassLoader01.php,
+Pagina 366 - Praticar a PessoaControl01.php - Proxima atividade iniciar o Front Controller
+
+27/03/2020 - Curso de javascript com Marcelo Guanabara. 
+26/03/2020 - Parte da tarde laravel e Modulo 20- Php & Segurança 
+26/03/2020 - Manha Java Script com Marcelo Guanabara. 
+
+25/03/2020 - Parte da tarde. PHP Nivel 01 e laravel. 
+
+25/03/2020 - Parte da manha - Book, PessoaControl01.php Continua ClassLoader01.php,
+Pagina 366 - Praticar a PessoaControl01.php - Proxima atividade iniciar o Front Controller. 
+
+24/03/2020 - Parte tarde - Laravel. 
+24/03/2020 - Manha, Java script com Guanabara. Aula 07. 
+
+21/03/2020 - Parte da tarde - Laravel 
+
+20/03/2020 - Parte da Manha. book/livro/cap6/PessoaControl01.php Continua ClassLoader01.php. Trabalhando appLoader01.php  em Lib/Livro/Core/AppLoader01.php. Pagina 358.  
+
+19/03/2020 - ClassLoader01.php - Verificar o comportamento dos métodos, desta função. 
+
+19/03/2020 -  Parte da manha - JavaScript - Marcelo Guanabara. Guia de referencia da mozilla e da ecma. Developer.mozilla e ecma.international.org. Editores-> Visual Code da Microsoft. Node Js - Facilita rodar o js fora do servidor. Instalação do visual studio code Ate video 3.
+
+17 e 18 - Estudos do projeto restinstagram e laravel 
+
+16/03/2020 - Parte da Manha - How to do - Autocomplete Js - Até 16:00 hrs. 
+
+15/03/2020 - restinstagram - Construction 
+14/03/2020 - restinstagram - Construction system - 
+13/03/2020 - Autocomplete js 
+
+12/03/2020 - restinstagram na parte de tarde. 
+12/03/2020 - ClassLoader01.php - Verificar na pratica, a comportamento das das diversas funções apresentadas nesta classe. Pagina 356. 
+
+12/03/2020 - Parte manha - JS - Book Ninja Pagina 486 - Requisições HTTP Tentar executar os exemplos em um servidor.  	  
+
+11/03/2020 - Finalizado as deleções de photos, quando da. Ajustar as exclusões de usuários, para que seja contemplados também as exclusões das  
+photos do usuário bem photo_likes e photo_comments daquele usuário. 
+como coletar erros de sql no try{
+	
+}catch()  
+11/03/2020- Aulas front - How to - Autocomplete com js 
+
+10/03/2020 - Continuando com o projeto - Excluindo photos e seus relacionamentos. 
+
+10/03/2020 - Finalização de visualização randomica de fotos, parte da tarde codificar a view de uma foto bem como a exclusão da mesma. Modulo 21
+
+09/03/2020 - Continuação projeto restinstagram.  Criação do controller photo. Visualização randomica de fotos. 
+
+07/03/2020 - ClassLoader01.php - Verificar na pratica, a comportamento das das diversas funções apresentadas nesta classe. Pagina 356. 
+
+06/03/2020 - Manutenindo processo de geração de feed photos - Proxima etapa ajustar o feed  para que uma photo recupere os commentes e os likes para esta foto (photos.php - getFeedPhotos()); 
+05/03/2020 - Manutenindo o processo de geração do feed de photos(Comments, likes),  
+05/03/2020 - Dom document
+             Active element 
+             -Testar document.baseURI
+             -Fui até document.body =  
+
+29/02/2020(Sabado) - Modulo 21 Aula 29 - Dev instagram (projetox/restinstagram) - Projeto Original(projetox/php_devinstagram) - proximo - Excluir users e seus relacionamentos. - Usar o http method "DELETE"; 
+28/02/2020 - Js References - Proximo treinamento iniciar o DOM document. 
+27/02/2020 - Prosseguindo com o projeto restinstagram - php_devinstagram 	  
+
+27/02/2020 - Projetox projetox/weboffline JS Nija - Manifest file. Pagina 594 20.4.3 Aplicativos Web off-line
+ Armazenamento de aplicativos web off-line - <html manifest> imagino  que em help do servidor apache possa se encontrar maiores informações sobre os arquivos de manifesto. Verificar se nas aulas de b7web.com.br, existe alguma aula que trata os arquivos de manifest. 
+
+26/02/2020  - Parte da tarde, foi exercitado. A recuperação da dados do usuario 
+26/02/2020  - JS REFERENCES HTML DOM - DOM attributes - Proximo treinamento, exercitar o laço, entre o HTMLCollectionNode e o os nodesMaps 
+26/02/2020  - How to - Device looks - ok 
+
+25/02/2020 - Parte da tarde Modulo 21 - Aula 25, validando. Proxima aula do dia 26/02/Buscar as informações dos usuarios, de acordo com os methods inviados.  
+
+25/02/2020 - Parte da tarde- Book MVC pagina 355, implementar o Record01. 
+25/02/2020 - Parte manha (how to do) Mult step forms - That is a great morning - Codiging this.       
+
+24/02/2020 - Modulo 21 Aula 25 - Dev instagram (projetox/restinstagram) - Projeto Original(projetox/php_devinstagram) - Validando o jwt. 
+20/02/2020 - Verificar em relação ao \PDO:: 	  
+
+21/02/2020 - Modulo 21 Aula 24 - Criando o cadastro - Proxima aula, testar email invalido, email existe, etc, bem como o login com um usuario já cadastrado(Vinicius como exemplo) e senha invalidas validas. Dev instagram (projetox/restinstagram) - Projeto Original(projetox/php_devinstagram 
+
+21/02/2020 - js Ninja 15.6.2
+            Ir  para capitulo 18 - Scripts HTTP.
+            - No capitulo 19 ver em 19.9 Ajax com jQuery 
+            - Ver manifest files.  
+
+
+20/02/2020 - Dar prosseguimento, a usersController - Create() - Criação de novo usuario do sistema;  
+20/02/2020 - Modulo 21 Aula 22 - Dev instagram (projetox/restinstagram) - Projeto Original(projetox/php_devinstagram
+20/02/2020 - Parte manha (how to do) Mult step forms - That is a great morning - Codiging this.      
+
+19/02/2020 - Modulo 21 Aula 22 - Dev instagram (projetox/restinstagram) - Projeto Original(projetox/php_devinstagram)  	  
+19/02/2020 - Book - Rever book - Programando com orientação a objetos - SPL Autoloaders - Pagina 356.   
+19/02/2020 - Até 15.5.3, na proxima ir para 15.6 
+
+18/02/2020 - Modulo 21 Aula - proxima aula, nr 22 - Criando o login; 
+18/02/2020 - How todo -> Mult step forms
+
+14/02/2020 - How todo -> Password validation -> Fechei o form validation - Colocar a criterio de validação de senha de no minimo 8 caracters no app chat.  
+
+13/02/2020 - Aula 18 Modulo-21. Dev instagram (projetox/restinstagram) - Projeto Original(projetox/php_devinstagram)- Resolvi de ve o problema do composer autoload. Ver no modulo 17 Aula 25, para atualizar o Core. 	
+
+12/02/2020 - Book Criteria - Pagina 347 collection_update01.php. Verificar o metodo record. Codifiquei o collection_delete, porém na proxima estudo, verificar o update, para ajusta-lo de modo que seja atualizada, somente a coluna que foi explecitamente alterada. 
+
+11/02/2020 - Consegui realizar a configuração do autoload pelo composer.  Aula 18 Modulo-21. Dev instagram (projetox/restinstagram) - Projeto Original(projetox/php_devinstagram)	 	  
+11/02/2020 - Js Ninja 15.5.2 
+
+10/02/2020 - Aula 18 Modulo-21. Dev instagram (projetox/restinstagram) - Projeto Original(projetox/php_devinstagram)	  
+
+07/02/2020 - Modulo 17. Php Jedi Exemplo (em dowloads em projetox o mesmo nome "mvc_psr4"). Autoload usando composer.    
+
+06/02/2020 - Book - Criteria. collection_update01.php. Proxima aula, verificar a base de dados e testar novamente o update. Após estes teste, passar para o delete();  
+06/02/2020 - Manha js Ninja.15.3.2 - Documents as an element tree. 
+Treinar tambem dentro deste contexto, as propiedades e methods que tratam somente a arvore de nodes, bem como o tratamento de todo o conteúdo do documento, incluindo as linhas em branco e os comentários.
+-Ver também a geração de um sumário.   
+
+05/02/2020 -> Parte tarde. Financeiro e loginfacebook 
+05/02/2020 -> De manha nada - Até as 11:00 Hrs.   
+
+04/02/2020 -> Modulo 21. A tarde. Php Jedi. Usando psr-4 na estrutura mvc. 
+04/02/2020 - How to do -> Forms -> Forms Validation. Continuar na próxima aula. 
+
+01/02/2020 - Modulo php jedi (Aulas 21,22,23,24). Fechar o autoload para ir para o Modulo 21 Devinstagran. 
+
+31/01/2020 -> Modulo 21 Devinstagran - Aula 20 - (db_instagram) aula  diretorio 
+<restinstagram> - Projeto teacher em downloads    
+31/01/2020 -> Js Ninja - 15.2.3 Pagina 358. Ver no site w3school os atributos de document.
+
+30/01/2020 -> Book Criteria Pagina 345(Trezentos e quarenta e cinco) - collection_get01.php < -- > Proximo sera collection_update.php;
+30/01/2020 -> How to do -Popup form(In the 28 it was a good day, I think it will be a good day too) - The next class of how to do - Do, forms password validation topic;  	  
+
+29/01/2020 -> Modulo 21 Devinstragan - Aula 17 - (db_instagram) aula -> 20 
+29/08/2020 -> Js Ninja Seção 15.2.3 NodeLists e HTMLCollections
+
+28/08/2020 -> github -> O projeto restful(todorest local) para o repositorio restfulcrud.  
+28/01/2020 -> git Modulo 5-> Aula 16->Clonando repositórios remotos.  
+28/01/2020 -> Parte da manha -> How to do->Form->Popup (It was a good day)
+form
+
+27/01/2020 ->Book Criteria Pagina 342(Trezentos e quarenta e dois)
+-----------
+24/01/2020-> Modulo 21 aula 16 devstragran  - Proxima aula 17-endpoints 
+24/01/2020-> Parte da manha somente git. Proxima aula de git, treinar os camandos push. Verificando as alterações locais, bem como as remotas. Verificar as dicas do teacher, antes de iniciar as alterações no repositorio local, realizar os push das alterações remotas.
+-------- 
+23/01/2020-> Modulo 21 -Proxima, aula 16->DevStragam Api. 
+22/01/2012 -> Modulo 21 webservices. Aula 11 tipos de logins. 
+22/01/2020 -> Book - Criteria - Parte da manha. 
+21/01/2020 -> GitHub - Modulo 5.Git revert 
+21/01/2020 -> myChat - Configuração do SSL no servidor, e ajuste dos botões de login e register com facebook.  
+17/01/2019 ->  
+16/01/2019 -> ok->Php todorest - Subir para github  
+15/01/2020 -> Modulo 21 -  WebServices
+              Aula 10 - Criando seu propio webservice. 
+ 
+ Ultimo <-> Git Hub --> Modulo 5 <-- 
+
+
+  1)Tirou 2)Doenca 3)Moreno 3)sp 4)sp 
+         5) jesus 6)will 7) Carl 8)Gil 	   

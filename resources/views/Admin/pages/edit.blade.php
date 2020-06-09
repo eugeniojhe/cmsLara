@@ -40,7 +40,11 @@
             <div class="form-group row">
                 <label for="body" class="col-sm-1 control-label">Body:</label>
                 <div class="col-sm-11">
+<<<<<<< HEAD
                     <textarea name="body" class="form-control textareafield">{{$page->body}}
+=======
+                    <textarea name="body" class="form-control bodyfield">{{$page->body}}
+>>>>>>> teste
                     </textarea>                 
                </div>
             </div>
@@ -49,6 +53,7 @@
                 <label class="col-sm-1" control-label></label>
                 <input type="submit" class="btn btn-success" value="Confirm"> 
             </div>
+<<<<<<< HEAD
         </div> 
     </form>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script> 
@@ -67,3 +72,24 @@
         })
     </script>
 @endsection 
+=======
+        </div>       
+    </form> 
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector:'textarea.bodyfield',
+            height:300,
+            menubar:false,
+            plugins:['link','table','image','autoresize','lists'],
+            toolbar:'undo redo | formatselect | bold italic backcolor | alignleft aligncenter | alignright | alignjustfy | table | link image | bullist numlist',
+            content_css:[
+                '{{asset('assets/css/content.css')}}'
+            ],
+            images_upload_url:'{{route('imageupload')}}',
+            images_upload_credentials:true, 
+            conver_urls:false
+        });
+    </script>
+@endsection 
+>>>>>>> teste
