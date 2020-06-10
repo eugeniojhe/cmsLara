@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller; 
+use App\Http\Controllers\Controller;
+use App\Visitor; 
+use App\Page;
+use App\User;   
 
 class HomeController extends Controller
 {
@@ -24,6 +27,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $dateLimit = date('Y-m-d H:i:s',strtotime('-5 minutes'));
+        $visitorsTotal = Visitor::count();
+        $usersOnSomeDate = Visitor::select('ip')->where('date_access','>=',$dateLimit)->groupBy('ip')->get();
+        $usersOnline = count($usersOnSomeDate); 
+        $pagesTotal = Page::count();
+        $usersRegistered = User::count(); 
+
+        return view('admin.home',[
+            'visitorsTotal' => $visitorsTotal,
+            'usersOnline' => $usersOnline,
+            'pagesTotal' => $pagesTotal, 
+            'usersRegistered' => $usersRegistered
+        ]);
     }
 }

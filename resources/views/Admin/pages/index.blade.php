@@ -25,7 +25,7 @@
                         <td>{{$page->id}}</td>
                         <td>{{$page->title}}</td>
                         <td>
-                            <a href="" target="_blank" class="btn btn-sm btn-success">Ver</a>
+                            <a href="" target="_blank" class="btn btn-sm btn-success">See</a>
                              <a href="{{route('pages.edit',['page' =>$page->id])}}" class="btn btn-sm btn-info">Edit</a>
                             <form method="POST" action="{{route('pages.destroy',['page' =>$page->id])}}" class="d-inline">
                                 @csrf
