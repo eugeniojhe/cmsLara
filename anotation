@@ -170,6 +170,9 @@ CREATE TABLE `password_resets` (
      a variável pode ser mostrada de acordo com o seu contexto 
      se for uma string pode se usar por exemplo echo $variavel;
 
+
+     provider/AppServiceProvider.php -> action boot -> Disponibiliza - Compartilha, as as informações de forma global para todo o sistema 
+
      
 
 

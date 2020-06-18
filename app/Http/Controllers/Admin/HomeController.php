@@ -25,20 +25,38 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $dateLimit = date('Y-m-d H:i:s',strtotime('-5 minutes'));
-        $visitorsTotal = Visitor::count();
-        $usersOnSomeDate = Visitor::select('ip')->where('date_access','>=',$dateLimit)->groupBy('ip')->get();
+        $dateInterval = intval($request->input('interval',30)); 
+        if ($dateInterval > 120){
+            $dateInterval = 120; 
+        }
+        $dateNowLessInterval = date('Y-m-d H:i:s',strtotime('-'.$dateInterval.'days')); 
+        $dateNowLessSome = date('Y-m-d H:i:s',strtotime('-5 minutes'));
+        $visitorsTotal = Visitor::where('date_access','>=',$dateNowLessInterval)->count();
+        $usersOnSomeDate = Visitor::select('ip')->where('date_access','>=',$dateNowLessSome)->groupBy('ip')->get();
         $usersOnline = count($usersOnSomeDate); 
         $pagesTotal = Page::count();
-        $usersRegistered = User::count(); 
+        $usersRegistered = User::count();
+        $pageData = [];
+        $visitorsPage = Visitor::selectRaw('page,count(page) as c')
+        ->where('date_access','>=',$dateNowLessInterval)
+        ->groupBy('page')
+        ->get();
+        foreach($visitorsPage as $vistorByPage){
+            $pageData[$vistorByPage['page']] = intval($visitorByPage['c']); 
+        };
+        $pageLabels = json_encode(array_keys($pageData));
+        $pageValues = json_encode(array_values($pageData)); 
 
         return view('admin.home',[
             'visitorsTotal' => $visitorsTotal,
             'usersOnline' => $usersOnline,
             'pagesTotal' => $pagesTotal, 
-            'usersRegistered' => $usersRegistered
+            'usersRegistered' => $usersRegistered,
+            'pageLabels' => $pageLabels,
+            'pageValues' => $pageValues,
+            'dateInterval' => $dateInterval
         ]);
     }
 }
