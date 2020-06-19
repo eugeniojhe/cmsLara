@@ -36,7 +36,7 @@
             <div class="form-group row">
                 <label for="Body" class="col-sm-1 control-label">Body:</label>
                 <div class="col-sm-11">
-                    <textarea name="body" class="form-control">{{old('body')}}</textarea>
+                    <textarea name="body" class="form-control textareafield">{{old('body')}}</textarea>
                 </div>
             </div>
              
@@ -44,7 +44,34 @@
                 <label class="col-sm-1" control-label></label>
                 <input type="submit" class="btn btn-success" value="Confirm"> 
             </div>
-        </div> 
-        
+        </div>         
     </form> 
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script> 
+    <script>
+        /* tinymce.init({
+            selector:'textarea.textareafield',
+            height:300,
+            menubar:false,
+            plugins:['table','image','autoresize','lists'],
+            toolbar:['undo redo| formatselect | bold italic backcolor | alignleft aligncenter alignjustify alignright | table | link image | bullist numlist'],
+            content_css:[
+                '{{asset('assets/css/content.css')}}'
+            ],
+            images_upload_url:'{{route('imageupload')}}',
+            images_upload_credentials:''
+        }); */
+
+        tinymce.init({
+            selector:'textarea.textareafield',
+            height:300,
+            menubar:false,
+            plugins:['table','image','autoresize','lists'],
+            toolbar:'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignjustify alignright | table | link image | bullist numlist', 
+            content_css:[
+                '{{asset('assets/css/content.css')}}'
+            ],
+            images_upload_url:'{{route('imageupload')}}',
+            images_upload_credentials:'', 
+        })
+    </script>
 @endsection  

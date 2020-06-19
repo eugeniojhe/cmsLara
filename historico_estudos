@@ -1,6 +1,10 @@
-    +-----------------------+
+    +-------------------------+
  	  | Historico dos projetos| 
  	  +-----------------------+
+16/06/2020 - Cms Lara; 
+18/06/2020 - Noodes - 
+18/06/2020 - bookcomponents02 - Verificar a carga de Twig_Loader_Filesyste. Verificar qual o diretorio do mesmo, pela ativação da carga de appLoader. 
+17/06/2020 - Cms Lara a noite nodes 
 16/06/2020 - CmsLara 
 16/06/2020 - nodejs. Bom rendimento.  
 16/06/2020 - Resolvido o namespace do projectx/bookcomponents02 - Resolver o autoload. 
